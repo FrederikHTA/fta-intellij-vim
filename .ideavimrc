@@ -25,12 +25,11 @@ Plug 'tpope/vim-surround'
 " --- Custom key mappings ---
 " Todo
 " map x <leader>p \_dP
+"map <leader>v "_dP
 nmap n nzzzv
 nmap N Nzzzv
-vmap <leader>y "+y
-nmap <leader>y "+Y
-vmap <leader>p "+p
-nmap <leader>p "+P
+map <leader>y "+y
+map <leader>p "+p
 
 " Git
 map <leader>gm <Action>(Git.Menu)
@@ -41,8 +40,8 @@ map <leader>gn <Action>(GitNewBranchAction)
 map <leader>gk <Action>(Vcs.Push)
 
 " Code Actions
-map <leader>ci <Action>(ShowHoverInfo)
-map <leader>ce <Action>(ParameterInfo)
+map <leader>ce <Action>(ShowHoverInfo)
+map <leader>ci <Action>(ParameterInfo)
 map <leader>cd <Action>(ShowErrorDescription)
 map <leader>cr <action>(ReformatCode)
 map <leader>cl <action>(ReSharperGotoNextErrorInSolution)
