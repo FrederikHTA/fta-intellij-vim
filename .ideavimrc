@@ -84,6 +84,8 @@ map <leader>q <Action>(CloseContent)
 " Intellij Navigation
 " NERDTree (use q to exit)
 map <leader>n :NERDTreeToggle<CR>
+map <leader>m :NERDTreeFocus<CR>
+
 map <leader>ff <Action>(FindInPath)
 
 " Window Splits
