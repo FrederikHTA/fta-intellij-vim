@@ -3,31 +3,44 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
+let mapleader = " "
+
 set scrolloff=8
 set number relativenumber
 set idearefactormode=keep
 set ideajoin
-set sneak
-set quickscope
 set incsearch
-
-let mapleader = " "
+set clipboard+=unnamed
+set showmode
+set showcmd
+set ignorecase
+set smartcase
+set hlsearch
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-" Highlight copied text
-Plug 'machakann/vim-highlightedyank'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
+set highlightedyank
+set commentary
+set surround
+set nerdtree
+set sneak
+set quickscope
+set which-key
+"set easymotion
+"set notimeout
 
 " --- Custom key mappings ---
-" Todo
-" map x <leader>p \_dP
-"map <leader>v "_dP
-nmap n nzzzv
-nmap N Nzzzv
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap <C-u> <C-u>zzzv
+nnoremap <C-d> <C-d>zzzv
+nnoremap <C-f> <C-f>zzzv
+nnoremap <C-b> <C-b>zzzv
+"nnoremap [[ <Action>(MethodUp)
+"nnoremap ]] <Action>(MethodDown)
+
+" Leader mappings
 map <leader>y "+y
 map <leader>p "+p
 
@@ -38,18 +51,44 @@ map <leader>gp <Action>(Git.Pull)
 map <leader>gb <Action>(Git.Branches)
 map <leader>gn <Action>(GitNewBranchAction)
 map <leader>gk <Action>(Vcs.Push)
+map <leader>gc <Action>(CheckinProject)
+
+" Go to code
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gb <Action>(Back)
+nmap <leader>gf <Action>(Forward)
 
 " Code Actions
-map <leader>ce <Action>(ShowHoverInfo)
-map <leader>ci <Action>(ParameterInfo)
+map <leader>ci <Action>(ShowHoverInfo)
+map <leader>ce <Action>(ParameterInfo)
+map <leader>cr <Action>(ReformatCode)
 map <leader>cd <Action>(ShowErrorDescription)
-map <leader>cr <action>(ReformatCode)
-map <leader>cl <action>(ReSharperGotoNextErrorInSolution)
-map <leader>ch <action>(ReSharperGotoNextErrorInSolution)
+map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>ch <Action>(ReSharperGotoNextErrorInSolution)
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 
 " Tab Navigation
 map <leader>l <Action>(NextTab)
 map <leader>h <Action>(PreviousTab)
+map <leader>q <Action>(CloseContent)
 
 " Intellij Navigation
-map <leader><leader> <action>(FindInPath)
+" NERDTree (use q to exit)
+map <leader>n :NERDTreeToggle<CR>
+map <leader>ff <Action>(FindInPath)
+
+" Window Splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
