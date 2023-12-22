@@ -83,8 +83,9 @@ map <leader>q <Action>(CloseContent)
 
 " Intellij Navigation
 " NERDTree (use q to exit)
-map <leader>n :NERDTreeToggle<CR>
-map <leader>m :NERDTreeFocus<CR>
+map <leader>nn :NERDTreeToggle<CR>
+map <leader>no :NERDTreeFocus<CR>
+map <leader>nf :NERDTreeFind<CR>
 
 map <leader>ff <Action>(FindInPath)
 
@@ -96,7 +97,7 @@ map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
 
 " Testing
 map <leader>tl <Action>(RiderUnitTestRepeatPreviousRunAction)
-map <leader>ta <Action>(RiderUnitTestRunTreeTwAction)
+map <leader>ta <Action>(RiderUnitTestRunSolutionAction)
 map <leader>tr <Action>(RiderUnitTestRunContextAction)
 map <leader>td <Action>(RiderUnitTestDebugContextAction)
 map <leader>tm <Action>(ActivateUnitTestsToolWindow)
