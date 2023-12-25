@@ -15,7 +15,7 @@ set showmode
 set showcmd
 set ignorecase
 set smartcase
-"set hlsearch
+set hlsearch
 
 " Don't use Ex mode, use Q for formatting.
 "map Q gq
@@ -83,8 +83,10 @@ map <leader>q <Action>(CloseContent)
 
 " Intellij Navigation
 " NERDTree (use q to exit)
-map <leader>n :NERDTreeToggle<CR>
-map <leader>m :NERDTreeFocus<CR>
+map <leader>nt :NERDTreeToggle<CR>
+map <leader>no :NERDTreeFocus<CR>
+map <leader>nc :NERDTreeClose<CR>
+map <leader>nf :NERDTreeFind<CR>
 
 map <leader>ff <Action>(FindInPath)
 
@@ -96,7 +98,7 @@ map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
 
 " Testing
 map <leader>tl <Action>(RiderUnitTestRepeatPreviousRunAction)
-map <leader>ta <Action>(RiderUnitTestRunTreeTwAction)
+map <leader>ta <Action>(RiderUnitTestRunSolutionAction)
 map <leader>tr <Action>(RiderUnitTestRunContextAction)
 map <leader>td <Action>(RiderUnitTestDebugContextAction)
 map <leader>tm <Action>(ActivateUnitTestsToolWindow)
