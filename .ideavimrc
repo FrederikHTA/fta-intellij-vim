@@ -31,18 +31,22 @@ set quickscope
 "set notimeout
 
 " --- Custom key mappings ---
+map gd <Action>(GotoDeclaration)
+map gi <Action>(GotoImplementation)
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap <C-u> <C-u>zzzv
 nnoremap <C-d> <C-d>zzzv
 nnoremap <C-f> <C-f>zzzv
 nnoremap <C-b> <C-b>zzzv
-"nnoremap [[ <Action>(MethodUp)
-"nnoremap ]] <Action>(MethodDown)
+nmap [ <Action>(MethodUp)
+nmap ] <Action>(MethodDown)
 
 " Leader mappings
-map <leader>y "+y
-map <leader>p "+p
+vmap <leader>y "+y
+vmap <leader>p "+p
+vmap <Leader>d "+d
+vnoremap <leader>p "_dP
 
 " Git
 map <leader>gm <Action>(Git.Menu)
@@ -54,9 +58,6 @@ map <leader>gk <Action>(Vcs.Push)
 map <leader>gc <Action>(CheckinProject)
 
 " Go to code
-nmap <leader>gd <Action>(GotoDeclaration)
-nmap <leader>gt <Action>(GotoTypeDeclaration)
-nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gu <Action>(ShowUsages)
 nmap <leader>gb <Action>(Back)
 nmap <leader>gf <Action>(Forward)
