@@ -59,8 +59,6 @@ map <leader>gc <Action>(CheckinProject)
 
 " Go to code
 nmap <leader>gu <Action>(ShowUsages)
-nmap <leader>gb <Action>(Back)
-nmap <leader>gf <Action>(Forward)
 
 " Code Actions
 map <leader>ci <Action>(ShowHoverInfo)
