@@ -18,7 +18,7 @@ set smartcase
 set hlsearch
 
 " Don't use Ex mode, use Q for formatting.
-"map Q gq
+map Q gq
 
 set highlightedyank
 set commentary
@@ -40,18 +40,19 @@ nnoremap <C-u> <C-u>zzzv
 nnoremap <C-d> <C-d>zzzv
 nnoremap <C-f> <C-f>zzzv
 nnoremap <C-b> <C-b>zzzv
+nnoremap <C-l> :noh<CR><C-L>
 nmap [ <Action>(MethodUp)
 nmap ] <Action>(MethodDown)
 
 " Leader mappings
 vmap <leader>y "+y
 vmap <leader>p "+p
-vmap <Leader>d "+d
+vmap <leader>d "+d
 vnoremap <leader>p "_dP
 
 " Git
 let g:WhichKeyDesc_git = "<Space>g  Git"
-map <leader>gm <Action>(Git.Menu)
+map <leader>gs <Action>(Git.Menu)
 map <leader>gf <Action>(Git.Fetch)
 map <leader>gp <Action>(Git.Pull)
 map <leader>gb <Action>(Git.Branches)
@@ -76,10 +77,12 @@ map <leader>rv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 
-" Tab Navigation
+" Navigation
 map <leader>l <Action>(NextTab)
 map <leader>h <Action>(PreviousTab)
 map <leader>q <Action>(CloseContent)
+map <leader>sf <Action>(FindInPath)
+map <leader>w <Action>(SaveAll)
 
 " NERDTree (use q to exit)
 let g:WhichKeyDesc_nerdtree = "<Space>n  NERDTree"
@@ -87,9 +90,8 @@ map <leader>nt :NERDTreeToggle<CR>
 map <leader>no :NERDTreeFocus<CR>
 map <leader>nc :NERDTreeClose<CR>
 map <leader>nf :NERDTreeFind<CR>
-map <leader>ff <Action>(FindInPath)
 
-" Window Splits
+f Window Splits
 let g:WhichKeyDesc_windows = "<Space>w  Windows"
 map <leader>wv <Action>(SplitVertically)
 map <leader>ws <Action>(SplitHorizontally)
