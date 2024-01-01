@@ -45,10 +45,10 @@ nmap [ <Action>(MethodUp)
 nmap ] <Action>(MethodDown)
 
 " Leader mappings
-vmap <leader>y "+y
-vmap <leader>p "+p
-vmap <leader>d "+d
-vnoremap <leader>p "_dP
+nmap <leader>y "+y
+nmap <leader>p "+p
+nmap <leader>d "+d
+vmap <leader>p "_dP
 
 " Git
 let g:WhichKeyDesc_git = "<Space>g  Git"
