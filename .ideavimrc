@@ -43,6 +43,9 @@ nnoremap <C-b> <C-b>zzzv
 nnoremap <C-l> :noh<CR><C-L>
 nmap [ <Action>(MethodUp)
 nmap ] <Action>(MethodDown)
+vmap < <gv
+vmap > >gv
+
 
 " Leader mappings
 nmap <leader>y "+y
