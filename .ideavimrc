@@ -30,6 +30,11 @@ set which-key
 set notimeout
 "set easymotion
 
+" disable shitter windows sounds
+set belloff=all
+set noerrorbells
+set vb t_vb=
+
 " --- Custom key mappings ---
 nmap gd <Action>(GotoDeclaration)
 nmap gi <Action>(GotoImplementation)
