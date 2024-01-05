@@ -50,8 +50,7 @@ nmap [ <Action>(MethodUp)
 nmap ] <Action>(MethodDown)
 vmap < <gv
 vmap > >gv
-nmap J mzJ`z
-
+nnoremap J mzJ`z
 
 " Leader mappings
 nmap <leader>y "+y
