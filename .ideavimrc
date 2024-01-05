@@ -50,6 +50,7 @@ nmap [ <Action>(MethodUp)
 nmap ] <Action>(MethodDown)
 vmap < <gv
 vmap > >gv
+nmap J mzJ`z
 
 
 " Leader mappings
