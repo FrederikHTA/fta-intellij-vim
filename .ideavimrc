@@ -50,10 +50,8 @@ nmap [ <Action>(MethodUp)
 nmap ] <Action>(MethodDown)
 vmap < <gv
 vmap > >gv
-nnoremap J mzJ`z
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
 
 " Leader mappings
 nmap <leader>y "+y
@@ -62,7 +60,7 @@ nmap <leader>d "+d
 vmap <leader>p "_dP
 
 " Git
-let g:WhichKeyDesc_git = "<Space>g  Git"
+let g:WhichKeyDesc_git = "<Space>g Git"
 map <leader>gs <Action>(Git.Menu)
 map <leader>gf <Action>(Git.Fetch)
 map <leader>gp <Action>(Git.Pull)
@@ -72,7 +70,7 @@ map <leader>gk <Action>(Vcs.Push)
 map <leader>gc <Action>(CheckinProject)
 
 " Code Actions
-let g:WhichKeyDesc_code_actions = "<Space>c  Code Actions"
+let g:WhichKeyDesc_code_actions = "<Space>c Code Actions"
 map <leader>ci <Action>(ShowHoverInfo)
 map <leader>ce <Action>(ParameterInfo)
 map <leader>cr <Action>(ReformatCode)
@@ -81,7 +79,7 @@ map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>ch <Action>(ReSharperGotoNextErrorInSolution)
 
 " Refactoring
-let g:WhichKeyDesc_refactoring = "<Space>r  Refactoring"
+let g:WhichKeyDesc_refactoring = "<Space>r Refactoring"
 map <leader>rr <Action>(RenameElement)
 map <leader>rm <Action>(ExtractMethod)
 map <leader>rv <Action>(IntroduceVariable)
@@ -93,24 +91,24 @@ map <leader>l <Action>(NextTab)
 map <leader>h <Action>(PreviousTab)
 map <leader>q <Action>(CloseContent)
 map <leader>sf <Action>(FindInPath)
-map <leader>w <Action>(SaveAll)
+map <leader>wr <Action>(SaveAll)
 
 " NERDTree (use q to exit)
-let g:WhichKeyDesc_nerdtree = "<Space>n  NERDTree"
+let g:WhichKeyDesc_nerdtree = "<Space>n NERDTree"
 map <leader>nt :NERDTreeToggle<CR>
 map <leader>no :NERDTreeFocus<CR>
 map <leader>nc :NERDTreeClose<CR>
 map <leader>nf :NERDTreeFind<CR>
 
 f Window Splits
-let g:WhichKeyDesc_windows = "<Space>w  Windows"
+let g:WhichKeyDesc_windows = "<Space>w Windows"
 map <leader>wv <Action>(SplitVertically)
 map <leader>ws <Action>(SplitHorizontally)
 map <leader>wu <Action>(Unsplit)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
 
 " Testing
-let g:WhichKeyDesc_testing = "<Space>t  Intellij Testing"
+let g:WhichKeyDesc_testing = "<Space>t Intellij Testing"
 map <leader>tl <Action>(RiderUnitTestRepeatPreviousRunAction)
 map <leader>ta <Action>(RiderUnitTestRunSolutionAction)
 map <leader>tr <Action>(RiderUnitTestRunContextAction)
