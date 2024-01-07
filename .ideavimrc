@@ -51,6 +51,9 @@ nmap ] <Action>(MethodDown)
 vmap < <gv
 vmap > >gv
 nnoremap J mzJ`z
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 
 " Leader mappings
 nmap <leader>y "+y
