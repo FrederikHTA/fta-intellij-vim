@@ -5,6 +5,7 @@
 
 let mapleader = " "
 
+" basic vim settings
 set scrolloff=8
 set number relativenumber
 set idearefactormode=keep
@@ -20,15 +21,18 @@ set hlsearch
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
+" Add Plugins
 set highlightedyank
 set commentary
 set surround
 set nerdtree
-set sneak
 set quickscope
 set which-key
 set notimeout
-"set easymotion
+" sneak and easymotion are essentialy the same, except sneak goes to next match, 
+" and easymotion shows all matches and lets you choose by pressing a key
+" set sneak
+set easymotion
 
 " disable shitter windows sounds
 set belloff=all
@@ -58,6 +62,7 @@ nmap <leader>y "+y
 nmap <leader>p "+p
 nmap <leader>d "+d
 vmap <leader>p "_dP
+map s <Plug>(easymotion-bd-f)
 
 " Git
 let g:WhichKeyDesc_git = "<Space>g Git"
