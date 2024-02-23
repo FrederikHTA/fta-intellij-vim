@@ -102,7 +102,7 @@ map <leader>sg <Action>(FindInPath)
 map <leader>wr <Action>(SaveAll)
 
 " Switcher
-map <leader>b <Action>(Switcher)
+map <leader>ss <Action>(Switcher)
 
 " NERDTree (use q to exit)
 let g:WhichKeyDesc_nerdtree = "<Space>n NERDTree"
