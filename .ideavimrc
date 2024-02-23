@@ -4,6 +4,7 @@
 " Find more examples here: https://jb.gg/share-ideavimrc
 
 let mapleader = " "
+nnoremap <Space> <Nop>
 
 " basic vim settings
 set scrolloff=8
@@ -26,7 +27,7 @@ set highlightedyank
 set commentary
 set surround
 set nerdtree
-set quickscope
+"set quickscope
 set which-key
 set notimeout
 " sneak and easymotion are essentialy the same, except sneak goes to next match, 
@@ -49,7 +50,7 @@ nnoremap <C-u> <C-u>zzzv
 nnoremap <C-d> <C-d>zzzv
 nnoremap <C-f> <C-f>zzzv
 nnoremap <C-b> <C-b>zzzv
-nnoremap <C-l> :noh<CR><C-L>
+nnoremap <C-y> :noh<CR><C-L>
 nmap [ <Action>(MethodUp)
 nmap ] <Action>(MethodDown)
 vmap < <gv
@@ -100,6 +101,9 @@ map <leader>sf <Action>(SearchEverywhere)
 map <leader>sg <Action>(FindInPath)
 map <leader>wr <Action>(SaveAll)
 
+" Switcher
+map <leader>b <Action>(Switcher)
+
 " NERDTree (use q to exit)
 let g:WhichKeyDesc_nerdtree = "<Space>n NERDTree"
 map <leader>nt :NERDTreeToggle<CR>
@@ -125,3 +129,4 @@ map <leader>ta <Action>(RiderUnitTestRunSolutionAction)
 map <leader>tr <Action>(RiderUnitTestRunContextAction)
 map <leader>td <Action>(RiderUnitTestDebugContextAction)
 map <leader>tm <Action>(ActivateUnitTestsToolWindow)
+
