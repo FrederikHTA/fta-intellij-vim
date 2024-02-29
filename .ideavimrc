@@ -83,7 +83,7 @@ map <leader>ce <Action>(ParameterInfo)
 map <leader>cr <Action>(ReformatCode)
 map <leader>cd <Action>(ShowErrorDescription)
 map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
-map <leader>ch <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>ch <Action>(ReSharperGotoPrevErrorInSolution)
 
 " Refactoring
 let g:WhichKeyDesc_refactoring = "<Space>r Refactoring"
