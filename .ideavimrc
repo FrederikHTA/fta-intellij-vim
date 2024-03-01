@@ -128,5 +128,5 @@ map <leader>tl <Action>(RiderUnitTestRepeatPreviousRunAction)
 map <leader>ta <Action>(RiderUnitTestRunSolutionAction)
 map <leader>tr <Action>(RiderUnitTestRunContextAction)
 map <leader>td <Action>(RiderUnitTestDebugContextAction)
-map <leader>tm <Action>(ActivateUnitTestsToolWindow)
+map <leader>ts <Action>(ActivateUnitTestsToolWindow)
 
