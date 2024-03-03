@@ -58,6 +58,7 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap J mzJ`z
+map <leader>rvr <action>(IdeaVim.ReloadVimRc.reload)
 
 " Leader mappings
 nmap <leader>y "+y
@@ -68,7 +69,7 @@ map s <Plug>(easymotion-bd-f)
 
 " Git
 let g:WhichKeyDesc_git = "<Space>g Git"
-map <leader>gs <Action>(Git.Menu)
+map <leader>gs <action>(git.menu)
 map <leader>gf <Action>(Git.Fetch)
 map <leader>gp <Action>(Git.Pull)
 map <leader>gb <Action>(Git.Branches)
@@ -100,6 +101,7 @@ map <leader>q <Action>(CloseContent)
 map <leader>sf <Action>(SearchEverywhere)
 map <leader>sg <Action>(FindInPath)
 map <leader>wr <Action>(SaveAll)
+map <leader>kk <Action>(ToggleBookmark)
 
 " Switcher
 map <leader>ss <Action>(Switcher)
@@ -129,4 +131,3 @@ map <leader>ta <Action>(RiderUnitTestRunSolutionAction)
 map <leader>tr <Action>(RiderUnitTestRunContextAction)
 map <leader>td <Action>(RiderUnitTestDebugContextAction)
 map <leader>ts <Action>(ActivateUnitTestsToolWindow)
-
