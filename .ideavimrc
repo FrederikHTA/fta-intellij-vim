@@ -69,7 +69,7 @@ map s <Plug>(easymotion-bd-f)
 
 " Git
 let g:WhichKeyDesc_git = "<Space>g Git"
-map <leader>gs <action>(git.menu)
+map <leader>gs <action>(Git.Menu)
 map <leader>gf <Action>(Git.Fetch)
 map <leader>gp <Action>(Git.Pull)
 map <leader>gb <Action>(Git.Branches)
