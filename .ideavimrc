@@ -26,7 +26,7 @@ map Q gq
 set highlightedyank
 set commentary
 set surround
-set nerdtree
+set NERDTree
 "set quickscope
 set which-key
 set notimeout
