@@ -30,7 +30,7 @@ set NERDTree
 "set quickscope
 set which-key
 set notimeout
-" sneak and easymotion are essentialy the same, except sneak goes to next match, 
+" sneak and easymotion are essentialy the same, except sneak goes to next match,
 " and easymotion shows all matches and lets you choose by pressing a key
 " set sneak
 set easymotion
@@ -59,6 +59,8 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap J mzJ`z
 map <leader>rvr <action>(IdeaVim.ReloadVimRc.reload)
+map <leader>ct <action>(HideActiveWindow)
+
 
 " Leader mappings
 nmap <leader>y "+y
@@ -83,8 +85,8 @@ map <leader>ci <Action>(ShowHoverInfo)
 map <leader>ce <Action>(ParameterInfo)
 map <leader>cr <Action>(ReformatCode)
 map <leader>cd <Action>(ShowErrorDescription)
-map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
-map <leader>ch <Action>(ReSharperGotoPrevErrorInSolution)
+map <leader>cl <Action>(GotoNextError)
+map <leader>ch <Action>(GotoPrevError)
 
 " Refactoring
 let g:WhichKeyDesc_refactoring = "<Space>r Refactoring"
