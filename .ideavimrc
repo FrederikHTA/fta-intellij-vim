@@ -58,8 +58,8 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap J mzJ`z
-map <leader>rvr <action>(IdeaVim.ReloadVimRc.reload)
-map <leader>ct <action>(HideActiveWindow)
+map <leader>vrr <action>(IdeaVim.ReloadVimRc.reload)
+map <leader>ca <action>(HideActiveWindow)
 
 
 " Leader mappings
@@ -87,6 +87,7 @@ map <leader>cr <Action>(ReformatCode)
 map <leader>cd <Action>(ShowErrorDescription)
 map <leader>cl <Action>(GotoNextError)
 map <leader>ch <Action>(GotoPrevError)
+map <leader>b <Action>(ToggleLineBreakpoint)
 
 " Refactoring
 let g:WhichKeyDesc_refactoring = "<Space>r Refactoring"
@@ -97,6 +98,7 @@ map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 
 " Navigation
+let g:WhichKeyDesc_refactoring = "<Space>n Navigation"
 map <leader>l <Action>(NextTab)
 map <leader>h <Action>(PreviousTab)
 map <leader>q <Action>(CloseContent)
