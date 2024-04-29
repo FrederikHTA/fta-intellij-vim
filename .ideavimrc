@@ -46,7 +46,7 @@ nmap gi <Action>(GotoImplementation)
 nmap gu <Action>(ShowUsages)
 nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap <C-u> <C-u>zzzv
+rnoremap <C-u> <C-u>zzzv
 nnoremap <C-d> <C-d>zzzv
 nnoremap <C-f> <C-f>zzzv
 nnoremap <C-b> <C-b>zzzv
@@ -85,8 +85,8 @@ map <leader>ci <Action>(ShowHoverInfo)
 map <leader>ce <Action>(ParameterInfo)
 map <leader>cr <Action>(ReformatCode)
 map <leader>cd <Action>(ShowErrorDescription)
-map <leader>cl <Action>(GotoNextError)
-map <leader>ch <Action>(GotoPrevError)
+map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>ch <Action>(ReSharperGotoPrevErrorInSolution)
 map <leader>b <Action>(ToggleLineBreakpoint)
 
 " Refactoring
