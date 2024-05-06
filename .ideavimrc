@@ -81,8 +81,8 @@ map <leader>gc <Action>(CheckinProject)
 
 " Code Actions
 let g:WhichKeyDesc_code_actions = "<Space>c Code Actions"
-map <leader>ci <Action>(ShowHoverInfo)
-map <leader>ce <Action>(ParameterInfo)
+map <leader>ch <Action>(ShowHoverInfo)
+map <leader>cp <Action>(ParameterInfo)
 map <leader>cr <Action>(ReformatCode)
 map <leader>cd <Action>(ShowErrorDescription)
 map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
