@@ -54,16 +54,17 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap J mzJ`z
+nnoremap <leader>rp va(:s/(/(\r/g<CR>vi(:s/, /,\r/g<CR>:noh<CR>
+nnoremap <BS> ciw
 map <leader>vrr <action>(IdeaVim.ReloadVimRc.reload)
 map <leader>ca <action>(HideActiveWindow)
-
+map s <Plug>(easymotion-bd-f)
 
 " Leader mappings
 nmap <leader>y "+y
 nmap <leader>p "+p
 nmap <leader>d "+d
 vmap <leader>v "_dP
-map s <Plug>(easymotion-bd-f)
 
 " Git
 let g:WhichKeyDesc_git = "<Space>g Git"
