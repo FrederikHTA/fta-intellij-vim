@@ -104,6 +104,7 @@ map <leader>sg <Action>(FindInPath)
 map <leader>wr <Action>(SaveAll)
 map <leader>kk <Action>(ToggleBookmark)
 nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
 
 " Switcher
 map <leader>ss <Action>(Switcher)
