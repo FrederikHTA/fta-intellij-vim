@@ -59,6 +59,7 @@ nnoremap <BS> ciw
 map <leader>vrr <action>(IdeaVim.ReloadVimRc.reload)
 map <leader>ca <action>(HideActiveWindow)
 map s <Plug>(easymotion-bd-f)
+nmap Y y$
 
 " Leader mappings
 nmap <leader>y "+y
