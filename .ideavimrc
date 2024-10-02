@@ -56,7 +56,6 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap J mzJ`z
 nnoremap <leader>rp va(:s/(/(\r/g<CR>vi(:s/, /,\r/g<CR>:noh<CR>
 nnoremap <BS> ciw
-map <leader>vrr <action>(IdeaVim.ReloadVimRc.reload)
 map <leader>ca <action>(HideActiveWindow)
 map s <Plug>(easymotion-bd-f)
 nmap Y y$
@@ -67,6 +66,12 @@ nmap <leader>p "+p
 nmap <leader>d "+d
 vmap <leader>v "_dP
 
+
+" Open vimrc file
+let g:WhichKeyDesc_open_init_vim = '<leader>fp Open vimrc file' 
+map <Leader>vo :e \C:\Users\FrederikTræholt\.ideavimrc<CR>
+map <leader>vrr <action>(IdeaVim.ReloadVimRc.reload)
+
 " Git
 let g:WhichKeyDesc_git = "<Space>g Git"
 map <leader>gs <action>(Git.Menu)
@@ -76,15 +81,20 @@ map <leader>gb <Action>(Git.Branches)
 map <leader>gn <Action>(GitNewBranchAction)
 map <leader>gk <Action>(Vcs.Push)
 map <leader>gc <Action>(CheckinProject)
+map <leader>gC <Action>(copilot.chat.show)
+
 
 " Code Actions
 let g:WhichKeyDesc_code_actions = "<Space>c Code Actions"
 map <leader>cp <Action>(ParameterInfo)
-map <leader>ci <Action>(ShowHoverInfo)
+map <leader>ci <Action>(QuickJavaDoc)
 map <leader>cr <Action>(ReformatCode)
 map <leader>ce <Action>(ShowErrorDescription)
-map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
-map <leader>ch <Action>(ReSharperGotoPrevErrorInSolution)
+"map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
+"map <leader>ch <Action>(ReSharperGotoPrevErrorInSolution)
+map <leader>cl <Action>(GotoNextError)
+map <leader>ch <Action>(GotoPreviousError)
+
 map <leader>b <Action>(ToggleLineBreakpoint)
 
 " Refactoring
@@ -97,18 +107,25 @@ map <leader>rs <Action>(ChangeSignature)
 
 " Navigation
 let g:WhichKeyDesc_refactoring = "<Space>n Navigation"
-map <leader>l <Action>(NextTab)
-map <leader>h <Action>(PreviousTab)
+map <S-l> <Action>(NextTab)
+map <S-h> <Action>(PreviousTab)
 map <leader>q <Action>(CloseContent)
 map <leader>sf <Action>(SearchEverywhere)
 map <leader>sg <Action>(FindInPath)
 map <leader>wr <Action>(SaveAll)
 map <leader>kk <Action>(ToggleBookmark)
+map <leader>kn <Action>(GotoNextBookmark)
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
 
-" Switcher
+" Intellij tool windows
+let g:WhichKeyDesc_refactoring = "<Space>s Intellij tool windows"
+map <leader>sb <Action>(ActivateBuildToolWindow)
 map <leader>ss <Action>(Switcher)
+map <leader>st <Action>(ActivateTerminalToolWindow)
+map <leader>sS <Action>(BuildWholeSolutionAction)
+map <leader>sB <Action>(BuildCurrentProject)
+
 
 " NERDTree (use q to exit)
 let g:WhichKeyDesc_nerdtree = "<Space>n NERDTree"
@@ -117,12 +134,13 @@ map <leader>no :NERDTreeFocus<CR>
 map <leader>nc :NERDTreeClose<CR>
 map <leader>nf :NERDTreeFind<CR>
 
-f Window Splits
+" Window Splits
 let g:WhichKeyDesc_windows = "<Space>w Windows"
 map <leader>wv <Action>(SplitVertically)
 map <leader>ws <Action>(SplitHorizontally)
 map <leader>wu <Action>(Unsplit)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+map <leader>wt <Action>(EditSourceInNewWindow)
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
@@ -135,4 +153,5 @@ map <leader>ta <Action>(RiderUnitTestRunSolutionAction)
 map <leader>tr <Action>(RiderUnitTestRunContextAction)
 map <leader>td <Action>(RiderUnitTestDebugContextAction)
 map <leader>tc <Action>(RiderUnitTestCoverTreeTwAction)
-map <leader>ts <Action>(ActivateTestsToolWindow)
+map <leader>ts <Action>(ActivateUnitTestsToolWindow)
+map <leader>tf <Action>(RiderUnitTestRerunBrokenSplitAction)
