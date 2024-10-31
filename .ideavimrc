@@ -133,6 +133,8 @@ map <leader>nt :NERDTreeToggle<CR>
 map <leader>no :NERDTreeFocus<CR>
 map <leader>nc :NERDTreeClose<CR>
 map <leader>nf :NERDTreeFind<CR>
+map <leader>ns <Action>(ActivateStructureToolWindow)
+
 
 " Window Splits
 let g:WhichKeyDesc_windows = "<Space>w Windows"
@@ -154,4 +156,4 @@ map <leader>tr <Action>(RiderUnitTestRunContextAction)
 map <leader>td <Action>(RiderUnitTestDebugContextAction)
 map <leader>tc <Action>(RiderUnitTestCoverTreeTwAction)
 map <leader>ts <Action>(ActivateUnitTestsToolWindow)
-map <leader>tf <Action>(RiderUnitTestRerunBrokenSplitAction)
+map <leader>tf <Action>(RiderUnitTestSessionRerunFailedTestsAction)
