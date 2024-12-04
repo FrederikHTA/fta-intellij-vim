@@ -124,7 +124,11 @@ map <leader>sb <Action>(ActivateBuildToolWindow)
 map <leader>ss <Action>(Switcher)
 map <leader>st <Action>(ActivateTerminalToolWindow)
 map <leader>sS <Action>(BuildWholeSolutionAction)
+map <leader>sn <Action>(ActivateNuGetToolWindow)
 map <leader>sB <Action>(BuildCurrentProject)
+map <leader>sr <Action>(ActivateRunToolWindow)
+map <leader>sd <Action>(ActivateDebugToolWindow)
+
 
 
 " NERDTree (use q to exit)
