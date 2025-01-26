@@ -31,7 +31,7 @@ set which-key
 set notimeout
 set easymotion
 
-" disable shitter windows sounds
+"disable shitter windows sounds
 set belloff=all
 set noerrorbells
 set vb t_vb=
@@ -39,10 +39,11 @@ set vb t_vb=
 " --- Custom key mappings ---
 nmap gd <Action>(GotoDeclaration)
 nmap gi <Action>(GotoImplementation)
+nmap gt <Action>(GotoTypeDeclaration)
 nmap gu <Action>(ShowUsages)
 nnoremap n nzzzv
 nnoremap N Nzzzv
-rnoremap <C-u> <C-u>zzzv
+nnoremap <C-u> <C-u>zzzv
 nnoremap <C-d> <C-d>zzzv
 nnoremap <C-f> <C-f>zzzv
 nnoremap <C-b> <C-b>zzzv
@@ -66,10 +67,9 @@ nmap <leader>p "+p
 nmap <leader>d "+d
 vmap <leader>v "_dP
 
-
 " Open vimrc file
 let g:WhichKeyDesc_open_init_vim = '<leader>fp Open vimrc file' 
-map <Leader>vo :e \C:\Users\FrederikTræholt\.ideavimrc<CR>
+map <Leader>vo :e \C:\Users\FrederikHTA\.ideavimrc<CR>
 map <leader>vrr <action>(IdeaVim.ReloadVimRc.reload)
 
 " Git
@@ -90,10 +90,10 @@ map <leader>cp <Action>(ParameterInfo)
 map <leader>ci <Action>(QuickJavaDoc)
 map <leader>cr <Action>(ReformatCode)
 map <leader>ce <Action>(ShowErrorDescription)
-"map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
-"map <leader>ch <Action>(ReSharperGotoPrevErrorInSolution)
-map <leader>cl <Action>(GotoNextError)
-map <leader>ch <Action>(GotoPreviousError)
+map <leader>cl <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>ch <Action>(ReSharperGotoPrevErrorInSolution)
+"map <leader>cl <Action>(GotoNextError)
+"map <leader>ch <Action>(GotoPreviousError)
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 
